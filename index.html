@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Job Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="portal-info">
+            <h1>Campus Job Portal</h1>
+            <p>Find Jobs & Part-Time Opportunities</p>
+
+            <div class="features">
+                <p>✓ Campus Jobs</p>
+                <p>✓ Part-Time Jobs</p>
+                <p>✓ Internship Opportunities</p>
+                <p>✓ Easy Online Applications</p>
+            </div>
+        </div>
+
+
+        <div class="login-box">
+
+            <h2>Student Login</h2>
+            <p>Login to explore opportunities</p>
+
+            <form onsubmit="login(event)">
+
+                <label>Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label>Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <p class="register-text">
+                New student?
+                <a href="register.html">Create Account</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
