@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Jobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="topbar">
+            <h2>Campus Job Portal</h2>
+
+            <div class="user-info">
+                <a href="dashboard.html">Dashboard</a>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <h1>Available Opportunities 💼</h1>
+            <p>Find campus jobs and part-time opportunities.</p>
+
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchJob"
+                    placeholder="Search jobs..."
+                    onkeyup="searchJobs()"
+                >
+            </div>
+
+            <section class="job-list">
+
+                <div class="job-card">
+                    <div>
+                        <h3>Web Developer</h3>
+                        <p>Company: Tech Solutions</p>
+                        <p>Type: Part-Time</p>
+                        <p>Location: Remote</p>
+                        <p>Salary: ₹8,000 / month</p>
+                    </div>
+
+                    <button onclick="applyJob('Web Developer')">
+                        Apply Now
+                    </button>
+                </div>
+
+
+                <div class="job-card">
+                    <div>
+                        <h3>Content Writer</h3>
+                        <p>Company: Creative Media</p>
+                        <p>Type: Part-Time</p>
+                        <p>Location: On Campus</p>
+                        <p>Salary: ₹5,000 / month</p>
+                    </div>
+
+                    <button onclick="applyJob('Content Writer')">
+                        Apply Now
+                    </button>
+                </div>
+
+
+                <div class="job-card">
+                    <div>
+                        <h3>Data Entry Assistant</h3>
+                        <p>Company: Campus Services</p>
+                        <p>Type: Part-Time</p>
+                        <p>Location: Remote</p>
+                        <p>Salary: ₹6,000 / month</p>
+                    </div>
+
+                    <button onclick="applyJob('Data Entry Assistant')">
+                        Apply Now
+                    </button>
+                </div>
+
+
+                <div class="job-card">
+                    <div>
+                        <h3>Social Media Assistant</h3>
+                        <p>Company: Digital Hub</p>
+                        <p>Type: Part-Time</p>
+                        <p>Location: Hybrid</p>
+                        <p>Salary: ₹7,000 / month</p>
+                    </div>
+
+                    <button onclick="applyJob('Social Media Assistant')">
+                        Apply Now
+                    </button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+     <script type="module" src="script.js"></script>
+
+</body>
+</html>
