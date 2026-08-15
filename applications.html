@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="topbar">
+            <h2>Campus Job Portal</h2>
+
+            <div class="user-info">
+                <a href="dashboard.html">Dashboard</a>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <h1>My Applications 📝</h1>
+            <p>Track the status of your job applications.</p>
+
+            <section class="application-list" id="applicationList">
+
+                <p>Loading applications...</p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module">
+    import { auth, db, collection, getDocs } from "./firebase.js";
+
+    auth.onAuthStateChanged(async function(user) {
+
+        const list = document.getElementById("applicationList");
+
+        if (!user) {
+            list.innerHTML = "<p>Please login first.</p>";
+            return;
+        }
+
+        const snapshot = await getDocs(collection(db, "applications"));
+
+        list.innerHTML = "";
+
+        snapshot.forEach(function(doc) {
+
+            const data = doc.data();
+
+            if (data.email === user.email) {
+                list.innerHTML += `
+                    <div class="application-card">
+                        <h3>${data.jobName}</h3>
+                        <p>Applied by: ${data.email}</p>
+                        <span class="status pending">${data.status}</span>
+                    </div>
+                `;
+            }
+
+        });
+
+        if (list.innerHTML === "") {
+            list.innerHTML = "<p>No applications found.</p>";
+        }
+    });
+</script>
+
+</body>
+</html>
