@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #eef3f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.portal-info {
+    width: 55%;
+    padding: 50px;
+    background: #2457a6;
+    color: white;
+}
+
+.portal-info h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.portal-info p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.features {
+    margin-top: 35px;
+}
+
+.login-box {
+    width: 45%;
+    padding: 45px;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #2457a6;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #17427f;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-text a {
+    color: #2457a6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .portal-info,
+    .login-box {
+        width: 100%;
+    }
+}
+/* Dashboard, Jobs, Applications, Profile */
+
+.dashboard {
+    width: 100%;
+    min-height: 100vh;
+    background: #eef3f8;
+}
+
+.topbar {
+    background: #2457a6;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.application-card,
+.job-card,
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.pending { background: orange; }
+.shortlisted { background: #2457a6; }
+.selected { background: green; }
+.rejected { background: red; }
